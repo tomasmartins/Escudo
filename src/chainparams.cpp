@@ -117,7 +117,6 @@ public:
         assert(hashGenesisBlock == uint256("0x000004e236253625fec7b65325da43183fd7c78e2cdf1b0598b51b048328b127"));
         assert(genesis.hashMerkleRoot == uint256("0xd0a3fc2590240ed4627f868dba6b3671b5682db3fcf5013a40f53ef4c41873d9"));
 
-        vFixedSeeds.clear();
         vSeeds.clear();
         
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 66);
@@ -127,6 +126,9 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x04)(0x88)(0xAD)(0xE4).convert_to_container<std::vector<unsigned char> >();
 
         convertSeed6(vFixedSeeds, pnSeed6_main, ARRAYLEN(pnSeed6_main));
+        
+        vFixedSeeds.clear();
+ 
 
         nLastPOWBlock = 10000;
     }
